@@ -1,0 +1,360 @@
+[16-Apr-2015 20:43:36 UTC] PHP Parse error:  syntax error, unexpected 'die' (T_EXIT), expecting ',' or ';' in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 64
+[16-Apr-2015 21:41:53 UTC] PHP Fatal error:  Call to a member function saveUser() on a non-object in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 80
+[16-Apr-2015 21:43:51 UTC] PHP Fatal error:  Call to a member function saveUser() on a non-object in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 80
+[16-Apr-2015 22:09:40 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/gofavo/public_html/api/v1/application/models/Users_model.php on line 18
+[16-Apr-2015 22:11:41 UTC] PHP Fatal error:  Call to a member function get_where() on a non-object in /home/gofavo/public_html/api/v1/application/models/Users_model.php on line 17
+[17-Apr-2015 02:41:08 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/gofavo/public_html/api/v1/application/models/Users_model.php on line 58
+[17-Apr-2015 03:22:48 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 87
+[17-Apr-2015 06:18:08 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 94
+[17-Apr-2015 06:30:52 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 94
+[17-Apr-2015 06:31:04 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 94
+[17-Apr-2015 06:31:43 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 94
+[17-Apr-2015 06:31:45 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 87
+[17-Apr-2015 06:31:46 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 95
+[17-Apr-2015 06:34:03 UTC] PHP Fatal error:  Can't use method return value in write context in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 78
+[17-Apr-2015 06:34:39 UTC] PHP Fatal error:  Can't use method return value in write context in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 78
+[17-Apr-2015 06:35:52 UTC] PHP Fatal error:  Can't use method return value in write context in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 78
+[17-Apr-2015 06:36:27 UTC] PHP Fatal error:  Can't use method return value in write context in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 78
+[17-Apr-2015 06:39:28 UTC] PHP Fatal error:  Can't use method return value in write context in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 78
+[17-Apr-2015 06:40:57 UTC] PHP Fatal error:  Can't use method return value in write context in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 78
+[17-Apr-2015 06:42:30 UTC] PHP Fatal error:  Can't use method return value in write context in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 78
+[17-Apr-2015 06:54:16 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 101
+[17-Apr-2015 06:54:22 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 101
+[17-Apr-2015 06:59:25 UTC] PHP Parse error:  syntax error, unexpected ''' (T_ENCAPSED_AND_WHITESPACE), expecting ')' in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 87
+[20-Apr-2015 00:00:52 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 112
+[20-Apr-2015 00:02:27 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 112
+[20-Apr-2015 05:30:51 UTC] PHP Fatal error:  Cannot redeclare Users::answerbyuser_post() in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 162
+[20-Apr-2015 05:31:41 UTC] PHP Fatal error:  Cannot redeclare Users::answerbyuser_post() in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 162
+[20-Apr-2015 05:31:43 UTC] PHP Parse error:  syntax error, unexpected ''mobile' (T_ENCAPSED_AND_WHITESPACE), expecting ')' in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 88
+[20-Apr-2015 05:32:55 UTC] PHP Fatal error:  Cannot redeclare Users::answerbyuser_post() in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 162
+[21-Apr-2015 00:10:17 UTC] PHP Fatal error:  Cannot redeclare Users_model::questionList() in /home/gofavo/public_html/api/v1/application/models/Users_model.php on line 69
+[21-Apr-2015 00:11:12 UTC] PHP Fatal error:  Cannot redeclare Users_model::questionList() in /home/gofavo/public_html/api/v1/application/models/Users_model.php on line 69
+[21-Apr-2015 00:37:19 UTC] PHP Fatal error:  Class 'Users_model' not found in /home/gofavo/public_html/api/v1/system/core/Loader.php on line 305
+[21-Apr-2015 00:38:28 UTC] PHP Fatal error:  Class 'Users_model' not found in /home/gofavo/public_html/api/v1/system/core/Loader.php on line 305
+[21-Apr-2015 03:25:39 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 83
+[21-Apr-2015 03:26:22 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 83
+[21-Apr-2015 03:26:49 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 83
+[21-Apr-2015 03:26:51 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 83
+[21-Apr-2015 03:26:54 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 83
+[21-Apr-2015 03:27:00 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 83
+[21-Apr-2015 03:27:30 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 83
+[21-Apr-2015 03:27:31 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 83
+[21-Apr-2015 03:27:33 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 83
+[21-Apr-2015 03:28:13 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 83
+[21-Apr-2015 03:29:07 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 83
+[21-Apr-2015 03:29:12 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 83
+[21-Apr-2015 03:30:42 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 83
+[21-Apr-2015 03:30:53 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 83
+[21-Apr-2015 03:31:34 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 83
+[21-Apr-2015 03:32:07 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 93
+[21-Apr-2015 04:03:43 UTC] PHP Fatal error:  Class 'Users_model' not found in /home/gofavo/public_html/api/v1/system/core/Loader.php on line 305
+[21-Apr-2015 04:38:24 UTC] PHP Fatal error:  Call to a member function result() on a non-object in /home/gofavo/public_html/api/v1/application/models/Users_model.php on line 64
+[21-Apr-2015 04:44:03 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/gofavo/public_html/api/v1/application/models/Users_model.php on line 65
+[21-Apr-2015 04:44:25 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/gofavo/public_html/api/v1/application/models/Users_model.php on line 65
+[21-Apr-2015 04:58:09 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting variable (T_VARIABLE) or ${ (T_DOLLAR_OPEN_CURLY_BRACES) or {$ (T_CURLY_OPEN) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 99
+[21-Apr-2015 04:58:46 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 305
+[21-Apr-2015 05:08:48 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 257
+[21-Apr-2015 05:09:50 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 257
+[21-Apr-2015 05:30:20 UTC] PHP Fatal error:  Class 'Users_model' not found in /home/gofavo/public_html/api/v1/system/core/Loader.php on line 305
+[21-Apr-2015 05:32:13 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/models/Users_model.php on line 117
+[21-Apr-2015 05:41:55 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting variable (T_VARIABLE) or ${ (T_DOLLAR_OPEN_CURLY_BRACES) or {$ (T_CURLY_OPEN) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 99
+[22-Apr-2015 04:30:31 UTC] PHP Fatal error:  Call to undefined method Users::resize_image() in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 405
+[22-Apr-2015 05:18:32 UTC] PHP Fatal error:  Call to undefined method Users_model::profilePhoto() in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 415
+[22-Apr-2015 05:51:43 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 503
+[22-Apr-2015 05:52:38 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 503
+[22-Apr-2015 05:52:42 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 503
+[22-Apr-2015 10:03:10 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting ')' in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 289
+[22-Apr-2015 10:27:27 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 99
+[23-Apr-2015 10:04:11 UTC] PHP Fatal error:  Class 'Users_model' not found in /home/gofavo/public_html/api/v1/system/core/Loader.php on line 305
+[23-Apr-2015 10:15:26 UTC] PHP Fatal error:  Class 'Users_model' not found in /home/gofavo/public_html/api/v1/system/core/Loader.php on line 305
+[23-Apr-2015 10:25:47 UTC] PHP Parse error:  syntax error, unexpected '$data' (T_VARIABLE) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 621
+[23-Apr-2015 10:25:53 UTC] PHP Parse error:  syntax error, unexpected '$data' (T_VARIABLE) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 621
+[23-Apr-2015 10:31:02 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/models/Users_model.php on line 117
+[23-Apr-2015 17:28:31 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 569
+[23-Apr-2015 17:41:23 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 569
+[23-Apr-2015 18:23:40 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 569
+[23-Apr-2015 20:12:35 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 569
+[27-Apr-2015 11:09:48 UTC] PHP Fatal error:  Cannot redeclare Users::myWorkPic_post() in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 586
+[27-Apr-2015 11:10:25 UTC] PHP Fatal error:  Cannot redeclare Users::myWorkPic_post() in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 586
+[27-Apr-2015 11:11:04 UTC] PHP Fatal error:  Cannot redeclare Users::myWorkPic_post() in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 586
+[27-Apr-2015 11:11:05 UTC] PHP Fatal error:  Cannot redeclare Users::myWorkPic_post() in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 586
+[27-Apr-2015 11:11:05 UTC] PHP Fatal error:  Cannot redeclare Users::myWorkPic_post() in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 586
+[27-Apr-2015 11:11:06 UTC] PHP Fatal error:  Cannot redeclare Users::myWorkPic_post() in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 586
+[27-Apr-2015 11:11:06 UTC] PHP Fatal error:  Cannot redeclare Users::myWorkPic_post() in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 586
+[27-Apr-2015 11:11:07 UTC] PHP Fatal error:  Cannot redeclare Users::myWorkPic_post() in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 586
+[27-Apr-2015 11:11:23 UTC] PHP Fatal error:  Cannot redeclare Users::myWorkPic_post() in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 586
+[27-Apr-2015 11:11:42 UTC] PHP Fatal error:  Cannot redeclare Users::myWorkPic_post() in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 586
+[27-Apr-2015 11:11:53 UTC] PHP Fatal error:  Cannot redeclare Users::myWorkPic_post() in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 586
+[27-Apr-2015 11:18:19 UTC] PHP Warning:  POST Content-Length of 26246502 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[27-Apr-2015 17:06:58 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 813
+[28-Apr-2015 03:09:51 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 99
+[28-Apr-2015 03:15:20 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 571
+[28-Apr-2015 03:15:53 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 571
+[28-Apr-2015 05:09:17 UTC] PHP Fatal error:  Can't use method return value in write context in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 888
+[28-Apr-2015 05:11:08 UTC] PHP Fatal error:  Can't use method return value in write context in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 888
+[28-Apr-2015 05:11:08 UTC] PHP Fatal error:  Can't use method return value in write context in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 888
+[28-Apr-2015 05:12:57 UTC] PHP Fatal error:  Can't use method return value in write context in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 888
+[28-Apr-2015 05:12:58 UTC] PHP Fatal error:  Can't use method return value in write context in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 888
+[28-Apr-2015 05:13:15 UTC] PHP Fatal error:  Only variables can be passed by reference in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 919
+[28-Apr-2015 05:14:30 UTC] PHP Fatal error:  Only variables can be passed by reference in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 919
+[28-Apr-2015 05:14:33 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 919
+[28-Apr-2015 05:14:42 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 919
+[28-Apr-2015 05:14:43 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 919
+[28-Apr-2015 05:15:05 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 99
+[28-Apr-2015 05:15:09 UTC] PHP Fatal error:  Only variables can be passed by reference in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 919
+[28-Apr-2015 05:15:13 UTC] PHP Fatal error:  Only variables can be passed by reference in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 919
+[28-Apr-2015 05:15:43 UTC] PHP Fatal error:  Only variables can be passed by reference in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 919
+[28-Apr-2015 05:16:56 UTC] PHP Fatal error:  Only variables can be passed by reference in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 919
+[28-Apr-2015 05:16:58 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 571
+[28-Apr-2015 05:17:01 UTC] PHP Fatal error:  Only variables can be passed by reference in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 921
+[28-Apr-2015 05:17:19 UTC] PHP Fatal error:  Only variables can be passed by reference in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 921
+[28-Apr-2015 05:17:20 UTC] PHP Fatal error:  Only variables can be passed by reference in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 921
+[28-Apr-2015 05:25:28 UTC] PHP Fatal error:  Only variables can be passed by reference in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 921
+[28-Apr-2015 05:25:29 UTC] PHP Fatal error:  Only variables can be passed by reference in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 921
+[28-Apr-2015 05:26:27 UTC] PHP Fatal error:  Only variables can be passed by reference in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 921
+[28-Apr-2015 05:26:27 UTC] PHP Fatal error:  Only variables can be passed by reference in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 921
+[28-Apr-2015 05:27:49 UTC] PHP Fatal error:  Only variables can be passed by reference in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 921
+[28-Apr-2015 05:28:15 UTC] PHP Fatal error:  Only variables can be passed by reference in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 921
+[28-Apr-2015 05:39:47 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 571
+[28-Apr-2015 05:42:40 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 289
+[28-Apr-2015 06:27:39 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 99
+[28-Apr-2015 06:29:10 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 99
+[28-Apr-2015 19:13:23 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 902
+[28-Apr-2015 19:13:28 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 902
+[28-Apr-2015 19:13:30 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 902
+[29-Apr-2015 06:20:39 UTC] PHP Warning:  Unterminated comment starting line 244 in /home/gofavo/public_html/api/v1/application/config/rest.php on line 244
+[29-Apr-2015 07:06:19 UTC] PHP Warning:  Unterminated comment starting line 104 in /home/gofavo/public_html/api/v1/application/config/rest.php on line 104
+[04-May-2015 04:58:59 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 99
+[04-May-2015 05:00:44 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 596
+[04-May-2015 05:03:10 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 99
+[04-May-2015 12:29:36 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 906
+[04-May-2015 12:37:33 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 906
+[04-May-2015 12:42:42 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 906
+[04-May-2015 12:44:41 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 906
+[04-May-2015 12:47:20 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 906
+[04-May-2015 13:04:28 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 906
+[05-May-2015 03:15:49 UTC] PHP Fatal error:  Call to a member function formList() on a non-object in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 45
+[05-May-2015 03:30:42 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 96
+[05-May-2015 03:41:44 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting ')' in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 286
+[05-May-2015 03:43:03 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 566
+[05-May-2015 03:54:08 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 91
+[05-May-2015 03:55:03 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 92
+[05-May-2015 04:01:30 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting ')' in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 287
+[05-May-2015 04:04:52 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting ')' in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 287
+[05-May-2015 04:08:11 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting ')' in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 287
+[05-May-2015 04:11:01 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting ')' in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 287
+[05-May-2015 04:21:07 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 565
+[05-May-2015 04:24:32 UTC] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 51
+[05-May-2015 04:24:37 UTC] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 51
+[05-May-2015 04:24:38 UTC] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 51
+[05-May-2015 04:25:04 UTC] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 51
+[05-May-2015 04:25:06 UTC] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 51
+[05-May-2015 04:25:07 UTC] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 51
+[05-May-2015 04:25:20 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 92
+[05-May-2015 05:04:39 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting ')' in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 89
+[05-May-2015 05:07:28 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 561
+[05-May-2015 05:10:47 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 88
+[05-May-2015 05:16:33 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 561
+[05-May-2015 05:22:54 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 49
+[05-May-2015 05:23:32 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 94
+[05-May-2015 05:41:08 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 563
+[05-May-2015 05:44:05 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 563
+[05-May-2015 05:57:48 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 564
+[05-May-2015 05:58:35 UTC] PHP Parse error:  syntax error, unexpected ''m' (T_ENCAPSED_AND_WHITESPACE), expecting ')' in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 90
+[05-May-2015 05:59:12 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 90
+[05-May-2015 06:01:27 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 565
+[05-May-2015 06:05:57 UTC] PHP Warning:  Unterminated comment starting line 104 in /home/gofavo/public_html/api/v1/application/config/rest.php on line 104
+[05-May-2015 08:31:50 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 564
+[06-May-2015 03:39:43 UTC] PHP Parse error:  syntax error, unexpected ''gif|jpg|png|doc|' (T_ENCAPSED_AND_WHITESPACE) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 595
+[06-May-2015 04:59:13 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 285
+[06-May-2015 05:35:16 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 285
+[06-May-2015 05:39:04 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 94
+[06-May-2015 05:45:54 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 94
+[06-May-2015 14:19:56 UTC] PHP Warning:  Unknown: POST Content-Length of 20150336 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[08-May-2015 10:28:04 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 282
+[08-May-2015 10:29:51 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 282
+[08-May-2015 10:29:53 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1373
+[08-May-2015 10:29:54 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1373
+[08-May-2015 10:29:55 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1373
+[08-May-2015 10:29:56 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1373
+[08-May-2015 10:29:58 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1373
+[08-May-2015 10:30:28 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1373
+[08-May-2015 10:30:29 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1373
+[08-May-2015 10:31:26 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1373
+[08-May-2015 10:31:27 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1373
+[08-May-2015 10:31:29 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1373
+[08-May-2015 10:32:18 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1373
+[08-May-2015 10:32:19 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1373
+[08-May-2015 10:33:17 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1373
+[08-May-2015 10:33:18 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 282
+[08-May-2015 10:33:19 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1372
+[08-May-2015 10:33:21 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1372
+[08-May-2015 10:33:22 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1372
+[08-May-2015 10:33:23 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1372
+[08-May-2015 10:33:24 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1372
+[08-May-2015 10:33:25 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1372
+[08-May-2015 10:33:26 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1372
+[08-May-2015 10:39:02 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1376
+[08-May-2015 10:39:04 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1376
+[08-May-2015 10:39:05 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1376
+[08-May-2015 10:39:47 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1376
+[08-May-2015 22:27:15 UTC] PHP Warning:  Unknown: POST Content-Length of 18395578 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[08-May-2015 22:34:32 UTC] PHP Warning:  Unknown: POST Content-Length of 20580295 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[09-May-2015 15:22:20 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 823
+[09-May-2015 16:40:10 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 823
+[09-May-2015 16:40:14 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 823
+[09-May-2015 16:40:19 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 823
+[09-May-2015 16:40:30 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 823
+[09-May-2015 16:40:36 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 823
+[11-May-2015 06:17:50 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 283
+[11-May-2015 06:47:18 UTC] PHP Parse error:  syntax error, unexpected '$userId' (T_VARIABLE), expecting function (T_FUNCTION) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1492
+[11-May-2015 06:47:20 UTC] PHP Parse error:  syntax error, unexpected '$userId' (T_VARIABLE), expecting function (T_FUNCTION) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1492
+[11-May-2015 06:47:23 UTC] PHP Parse error:  syntax error, unexpected '$userId' (T_VARIABLE), expecting function (T_FUNCTION) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1492
+[11-May-2015 06:48:28 UTC] PHP Parse error:  syntax error, unexpected '$userId' (T_VARIABLE), expecting function (T_FUNCTION) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1492
+[11-May-2015 06:49:48 UTC] PHP Parse error:  syntax error, unexpected '$userId' (T_VARIABLE), expecting function (T_FUNCTION) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1492
+[11-May-2015 06:49:50 UTC] PHP Parse error:  syntax error, unexpected '$userId' (T_VARIABLE), expecting function (T_FUNCTION) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1492
+[11-May-2015 06:51:21 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1502
+[11-May-2015 06:51:24 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1502
+[11-May-2015 06:51:25 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1502
+[11-May-2015 06:51:46 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1502
+[11-May-2015 10:08:44 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 283
+[11-May-2015 11:13:55 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1295
+[11-May-2015 11:15:18 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 598
+[11-May-2015 11:16:25 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/models/Users_model.php on line 114
+[11-May-2015 11:53:21 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 798
+[11-May-2015 11:53:40 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 823
+[11-May-2015 11:53:45 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 823
+[11-May-2015 11:53:51 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 823
+[12-May-2015 02:59:55 UTC] PHP Parse error:  syntax error, unexpected 'CITY' (T_STRING), expecting ')' in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1157
+[12-May-2015 03:03:59 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/models/Users_model.php on line 114
+[12-May-2015 03:18:04 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 283
+[12-May-2015 03:19:37 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/models/Users_model.php on line 114
+[12-May-2015 03:25:11 UTC] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN) in /home/gofavo/public_html/api/v1/application/models/Users_model.php on line 452
+[12-May-2015 03:25:12 UTC] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN) in /home/gofavo/public_html/api/v1/application/models/Users_model.php on line 452
+[12-May-2015 03:25:13 UTC] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN) in /home/gofavo/public_html/api/v1/application/models/Users_model.php on line 452
+[12-May-2015 03:25:14 UTC] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN) in /home/gofavo/public_html/api/v1/application/models/Users_model.php on line 452
+[12-May-2015 03:38:30 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/models/Users_model.php on line 114
+[12-May-2015 03:45:43 UTC] PHP Fatal error:  Class 'Users_model' not found in /home/gofavo/public_html/api/v1/system/core/Loader.php on line 305
+[12-May-2015 03:45:47 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/gofavo/public_html/api/v1/application/models/Users_model.php on line 451
+[12-May-2015 03:49:52 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 597
+[12-May-2015 03:50:06 UTC] PHP Fatal error:  Class 'Users_model' not found in /home/gofavo/public_html/api/v1/system/core/Loader.php on line 305
+[12-May-2015 04:43:35 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 283
+[12-May-2015 04:45:32 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 283
+[12-May-2015 04:45:32 UTC] PHP Parse error:  syntax error, unexpected '3', expecting variable (T_VARIABLE) or quoted-string and whitespace (T_ENCAPSED_AND_WHITESPACE) or ${ (T_DOLLAR_OPEN_CURLY_BRACES) or {$ (T_CURLY_OPEN) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1294
+[12-May-2015 04:53:08 UTC] PHP Parse error:  syntax error, unexpected ''middleNam' (T_ENCAPSED_AND_WHITESPACE), expecting ')' in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1050
+[12-May-2015 04:57:59 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting variable (T_VARIABLE) or ${ (T_DOLLAR_OPEN_CURLY_BRACES) or {$ (T_CURLY_OPEN) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 92
+[12-May-2015 05:03:52 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1294
+[12-May-2015 05:04:20 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1294
+[12-May-2015 05:06:50 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 597
+[12-May-2015 06:06:31 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1625
+[12-May-2015 06:06:33 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1625
+[12-May-2015 06:06:34 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1625
+[12-May-2015 06:06:35 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1625
+[12-May-2015 06:07:55 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1625
+[12-May-2015 06:07:56 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1625
+[12-May-2015 06:07:57 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1625
+[12-May-2015 06:07:58 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1625
+[12-May-2015 06:09:09 UTC] PHP Fatal error:  Class 'Users_model' not found in /home/gofavo/public_html/api/v1/system/core/Loader.php on line 305
+[12-May-2015 06:13:33 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting variable (T_VARIABLE) or ${ (T_DOLLAR_OPEN_CURLY_BRACES) or {$ (T_CURLY_OPEN) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 92
+[12-May-2015 06:13:34 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1294
+[12-May-2015 06:14:51 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 283
+[12-May-2015 06:15:36 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 283
+[12-May-2015 06:30:09 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting variable (T_VARIABLE) or ${ (T_DOLLAR_OPEN_CURLY_BRACES) or {$ (T_CURLY_OPEN) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 92
+[12-May-2015 06:30:09 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1294
+[12-May-2015 06:31:04 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting variable (T_VARIABLE) or ${ (T_DOLLAR_OPEN_CURLY_BRACES) or {$ (T_CURLY_OPEN) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 92
+[12-May-2015 06:33:31 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting variable (T_VARIABLE) or ${ (T_DOLLAR_OPEN_CURLY_BRACES) or {$ (T_CURLY_OPEN) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 92
+[12-May-2015 06:55:44 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 3246519 bytes) in Unknown on line 0
+[12-May-2015 07:00:28 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 3246519 bytes) in Unknown on line 0
+[12-May-2015 07:08:43 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 8136001 bytes) in /home/gofavo/public_html/api/v1/system/core/Common.php on line 723
+[12-May-2015 07:12:22 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 4041271 bytes) in Unknown on line 0
+[12-May-2015 07:24:45 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 8082541 bytes) in /home/gofavo/public_html/api/v1/system/core/Common.php on line 723
+[12-May-2015 07:28:22 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 4041271 bytes) in Unknown on line 0
+[12-May-2015 08:09:03 UTC] PHP Warning:  Unknown: POST Content-Length of 9069989 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[12-May-2015 08:15:19 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 6493037 bytes) in /home/gofavo/public_html/api/v1/system/core/Common.php on line 723
+[12-May-2015 08:19:47 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 4068001 bytes) in Unknown on line 0
+[12-May-2015 08:26:32 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 4068001 bytes) in Unknown on line 0
+[12-May-2015 08:35:40 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 6493037 bytes) in /home/gofavo/public_html/api/v1/system/core/Common.php on line 723
+[12-May-2015 08:46:57 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 283
+[12-May-2015 08:47:49 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 597
+[12-May-2015 08:50:09 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 283
+[12-May-2015 09:02:02 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 4041299 bytes) in Unknown on line 0
+[12-May-2015 09:06:11 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 4041299 bytes) in Unknown on line 0
+[12-May-2015 09:14:29 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 4041299 bytes) in Unknown on line 0
+[12-May-2015 09:22:28 UTC] PHP Fatal error:  Class 'Users_model' not found in /home/gofavo/public_html/api/v1/system/core/Loader.php on line 305
+[12-May-2015 09:24:29 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 597
+[12-May-2015 09:36:40 UTC] PHP Parse error:  syntax error, unexpected 'p' (T_STRING), expecting function (T_FUNCTION) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 528
+[12-May-2015 09:59:59 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1670
+[12-May-2015 10:00:00 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1670
+[12-May-2015 10:00:01 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1670
+[12-May-2015 10:00:28 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1670
+[12-May-2015 10:00:30 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1670
+[12-May-2015 10:00:31 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1670
+[12-May-2015 10:00:47 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1670
+[12-May-2015 10:01:11 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 283
+[12-May-2015 10:01:13 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1670
+[12-May-2015 10:01:14 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1670
+[12-May-2015 10:01:15 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1670
+[12-May-2015 10:01:17 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1670
+[12-May-2015 10:02:01 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1670
+[12-May-2015 10:02:03 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 283
+[12-May-2015 10:12:52 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC), expecting ';' or '{' in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 95
+[12-May-2015 10:12:54 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC), expecting ';' or '{' in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 95
+[12-May-2015 10:13:04 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC), expecting ';' or '{' in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 95
+[12-May-2015 10:13:05 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC), expecting ';' or '{' in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 95
+[12-May-2015 10:13:09 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC), expecting ';' or '{' in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 95
+[12-May-2015 10:13:11 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC), expecting ';' or '{' in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 95
+[12-May-2015 10:13:12 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC), expecting ';' or '{' in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 95
+[12-May-2015 10:19:18 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting variable (T_VARIABLE) or ${ (T_DOLLAR_OPEN_CURLY_BRACES) or {$ (T_CURLY_OPEN) in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 92
+[12-May-2015 10:19:19 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 1295
+[13-May-2015 04:01:42 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC), expecting ';' or '{' in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 95
+[13-May-2015 04:01:45 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC), expecting ';' or '{' in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 95
+[13-May-2015 04:01:50 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC), expecting ';' or '{' in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 95
+[13-May-2015 04:01:51 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC), expecting ';' or '{' in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 95
+[13-May-2015 04:05:54 UTC] PHP Parse error:  syntax error, unexpected '$code' (T_VARIABLE), expecting function (T_FUNCTION) in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 187
+[13-May-2015 04:05:55 UTC] PHP Parse error:  syntax error, unexpected '$code' (T_VARIABLE), expecting function (T_FUNCTION) in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 187
+[13-May-2015 04:05:57 UTC] PHP Parse error:  syntax error, unexpected '$code' (T_VARIABLE), expecting function (T_FUNCTION) in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 187
+[13-May-2015 04:06:00 UTC] PHP Parse error:  syntax error, unexpected '$code' (T_VARIABLE), expecting function (T_FUNCTION) in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 187
+[13-May-2015 04:06:01 UTC] PHP Parse error:  syntax error, unexpected '$code' (T_VARIABLE), expecting function (T_FUNCTION) in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 187
+[13-May-2015 04:06:04 UTC] PHP Parse error:  syntax error, unexpected '$code' (T_VARIABLE), expecting function (T_FUNCTION) in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 187
+[13-May-2015 04:27:17 UTC] PHP Fatal error:  Call to a member function formList() on a non-object in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 47
+[13-May-2015 04:27:18 UTC] PHP Fatal error:  Call to a member function formList() on a non-object in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 47
+[13-May-2015 04:27:19 UTC] PHP Fatal error:  Call to a member function formList() on a non-object in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 47
+[13-May-2015 08:09:30 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 111
+[13-May-2015 08:09:32 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 111
+[13-May-2015 08:09:34 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 111
+[13-May-2015 08:09:35 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 111
+[13-May-2015 08:09:36 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 111
+[13-May-2015 08:09:43 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 111
+[13-May-2015 08:09:44 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 111
+[13-May-2015 08:09:59 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gofavo/public_html/api/v1/application/controllers/Bids.php on line 105
+[13-May-2015 14:46:04 UTC] PHP Fatal error:  Function name must be a string in /home/gofavo/public_html/api/v1/application/controllers/Users.php on line 911
+[05-Aug-2015 07:24:04 America/Denver] PHP Parse error:  syntax error, unexpected 'none' (T_STRING) in /home/bragtrack/public_html/admin/gamerestapi/application/models/Users_model.php on line 474
+[05-Aug-2015 07:24:04 America/Denver] PHP Parse error:  syntax error, unexpected 'none' (T_STRING) in /home/bragtrack/public_html/admin/gamerestapi/application/models/Users_model.php on line 474
+[05-Aug-2015 07:24:22 America/Denver] PHP Parse error:  syntax error, unexpected 'none' (T_STRING) in /home/bragtrack/public_html/admin/gamerestapi/application/models/Users_model.php on line 474
+[05-Aug-2015 07:24:24 America/Denver] PHP Parse error:  syntax error, unexpected 'none' (T_STRING) in /home/bragtrack/public_html/admin/gamerestapi/application/models/Users_model.php on line 474
+[05-Aug-2015 07:24:28 America/Denver] PHP Parse error:  syntax error, unexpected 'none' (T_STRING) in /home/bragtrack/public_html/admin/gamerestapi/application/models/Users_model.php on line 474
+[11-Aug-2015 02:00:25 America/Denver] PHP Parse error:  syntax error, unexpected ',' in /home/bragtrack/public_html/admin/gamerestapi/application/controllers/Users.php on line 419
+[12-Aug-2015 01:58:23 America/Denver] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/bragtrack/public_html/admin/gamerestapi/application/models/Users_model.php on line 1798
+[12-Aug-2015 01:58:54 America/Denver] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/bragtrack/public_html/admin/gamerestapi/application/models/Users_model.php on line 1798
+[12-Aug-2015 01:59:28 America/Denver] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/bragtrack/public_html/admin/gamerestapi/application/models/Users_model.php on line 1798
+[12-Aug-2015 01:59:39 America/Denver] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/bragtrack/public_html/admin/gamerestapi/application/models/Users_model.php on line 1798
+[12-Aug-2015 01:59:41 America/Denver] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/bragtrack/public_html/admin/gamerestapi/application/models/Users_model.php on line 1798
+[12-Aug-2015 01:59:43 America/Denver] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/bragtrack/public_html/admin/gamerestapi/application/models/Users_model.php on line 1798
+[12-Aug-2015 01:59:45 America/Denver] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/bragtrack/public_html/admin/gamerestapi/application/models/Users_model.php on line 1798
+[12-Aug-2015 01:59:50 America/Denver] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/bragtrack/public_html/admin/gamerestapi/application/models/Users_model.php on line 1798
+[12-Aug-2015 01:59:55 America/Denver] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/bragtrack/public_html/admin/gamerestapi/application/models/Users_model.php on line 1798
+[12-Aug-2015 02:00:00 America/Denver] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/bragtrack/public_html/admin/gamerestapi/application/models/Users_model.php on line 1798
+[12-Aug-2015 02:00:25 America/Denver] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/bragtrack/public_html/admin/gamerestapi/application/models/Users_model.php on line 1798
+[12-Aug-2015 02:00:36 America/Denver] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/bragtrack/public_html/admin/gamerestapi/application/models/Users_model.php on line 1798
+[12-Aug-2015 02:00:38 America/Denver] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/bragtrack/public_html/admin/gamerestapi/application/models/Users_model.php on line 1798
+[12-Aug-2015 02:00:49 America/Denver] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/bragtrack/public_html/admin/gamerestapi/application/models/Users_model.php on line 1798
+[12-Aug-2015 02:00:49 America/Denver] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/bragtrack/public_html/admin/gamerestapi/application/models/Users_model.php on line 1798
+[12-Aug-2015 02:01:01 America/Denver] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/bragtrack/public_html/admin/gamerestapi/application/models/Users_model.php on line 1798
+[12-Aug-2015 02:02:46 America/Denver] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/bragtrack/public_html/admin/gamerestapi/application/models/Users_model.php on line 1798
+[12-Aug-2015 02:02:46 America/Denver] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/bragtrack/public_html/admin/gamerestapi/application/models/Users_model.php on line 1798
+[12-Aug-2015 02:03:01 America/Denver] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/bragtrack/public_html/admin/gamerestapi/application/models/Users_model.php on line 1798
+[12-Aug-2015 02:03:04 America/Denver] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/bragtrack/public_html/admin/gamerestapi/application/models/Users_model.php on line 1798
+[12-Aug-2015 02:03:06 America/Denver] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/bragtrack/public_html/admin/gamerestapi/application/models/Users_model.php on line 1798
+[12-Aug-2015 02:03:08 America/Denver] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/bragtrack/public_html/admin/gamerestapi/application/models/Users_model.php on line 1798
+[12-Aug-2015 02:03:14 America/Denver] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/bragtrack/public_html/admin/gamerestapi/application/models/Users_model.php on line 1798
+[12-Aug-2015 02:04:25 America/Denver] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home/bragtrack/public_html/admin/gamerestapi/application/models/Users_model.php on line 1800

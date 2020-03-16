@@ -1,0 +1,1010 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
+
+// This can be removed if you use __autoload() in config.php OR use Modular Extensions
+require APPPATH.'/libraries/REST_Controller.php';
+
+class Users extends REST_Controller
+{		
+	
+	public function __construct()
+    {
+
+		header('Access-Control-Allow-Origin: *');
+		header('Access-Control-Allow-Methods: GET, POST');
+        // Construct our parent class
+         parent::__construct();
+        $this->load->model('users_model');
+      	$this->load->library('image_lib');
+        $this->load->helper('url');
+        $this->load->library('email');
+        $this->load->library('session');	
+		$this->load->library('encrypt');
+	    
+        $this->methods['user_get']['limit'] = 500; //500 requests per hour per user/key
+        $this->methods['user_post']['limit'] = 100; //100 requests per hour per user/key
+        $this->methods['user_delete']['limit'] = 50; //50 requests per hour per user/key
+    }     
+  
+
+	//check NFC_TAG_ID
+     public function check_nfc_tag_post()
+     { 
+			$data=file_get_contents('php://input');
+			$userid=json_decode($data);       
+		  
+		     $nfc_tag=trim($userid->nfc_tag_id);		     
+			 			
+             $result = $this->users_model->check_tag($nfc_tag);
+                 
+                 if($result)
+                 {
+                   $message=array('status' => 1,'msg' =>'Tag ID verified!','data'=>$result[0]);                           
+                   $this->response($message, 200);
+                 }
+                 else{
+                    $message=array('status' => 0,'msg' =>'Failure..','data'=>array());                           
+                    $this->response($message, 300);
+                 }
+       }
+		   
+		   
+    //check collector type to Override
+        public function check_collector_post()
+        { 
+			$data=file_get_contents('php://input');
+			$userid=json_decode($data);       
+		  
+		     $nfc_tag=trim($userid->nfc_tag_id);		     
+			 			
+             $result = $this->users_model->check_collector_1($nfc_tag);
+                 
+                 if($result == 1)
+                   {
+                      $message=array('status' => 1,'msg' =>'C1 collector tag verified!');                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 2)
+                   {
+                      $message=array('status' => 2,'msg' =>'C2 collector..');                           
+                      $this->response($message, 200);
+					  
+                 }else{
+                      $message=array('status' => 0,'msg' =>'Failure..','data'=>array());                           
+                      $this->response($message, 300);
+                 }
+           }
+
+		   
+		   
+      //Get Collectors List
+        public function collectors_list_get()
+          { 
+             $collectors = $this->users_model->all_collector();
+                 
+                 if($collectors)
+                 {
+                   $message=array('status' => 1,'msg' =>'Collectors List','data'=>$collectors);                           
+                   $this->response($message, 200);
+                 }
+                 else{
+                   $message=array('status' => 0,'msg' =>'No collector found','data'=>array());                           
+                   $this->response($message, 300);
+                 }
+           }
+  
+	
+	 //Get Job Data 
+        public function job_post()
+          { 
+			$data=file_get_contents('php://input');
+			$userid=json_decode($data);       
+		  
+		     $collector_tag=trim($userid->collector_id);
+		     			 			
+             $jobs = $this->users_model->get_collector_job($collector_tag);
+                 
+                 if($jobs)
+                   {
+                     $message=array('status' => 1,'msg' =>'Job Details..','data'=>$jobs);                           
+                     $this->response($message, 200);
+					  
+                 }else{
+                     $message=array('status' => 0,'msg' =>'No Jobs found','data'=>array());                           
+                     $this->response($message, 300);
+                 }
+           }
+		   		   
+		   
+		   
+	//Get Collector Data
+        public function collector_post()
+          { 
+			$data=file_get_contents('php://input');
+			$userid=json_decode($data);       
+		  
+		     $nfc_tag_id=trim($userid->nfc_tag_id);
+             $collector_details = $this->users_model->get_collector($nfc_tag_id);
+                 
+                 if($collector_details)
+                   {
+                      $message=array('status' => 1,'msg' =>'Collectors Data','data'=>$collector_details[0]);                           
+                      $this->response($message, 200);
+                 }
+                   else{
+                      $message=array('status' => 0,'msg' =>'No collector found','data'=>array());                           
+                      $this->response($message, 300);
+                 }
+           }
+		   
+		   
+	  //Get Collector Data
+        public function worker_post()
+          { 
+			$data=file_get_contents('php://input');
+			$userid=json_decode($data);       
+		  
+		     $nfc_tag_id=trim($userid->nfc_tag_id);
+             $worker_details = $this->users_model->get_worker($nfc_tag_id);
+                 
+                 if($worker_details)
+                   {
+                      $message=array('status' => 1,'msg' =>'Worker Data','data'=>$worker_details[0]);                           
+                      $this->response($message, 200);
+                 }
+                   else{
+                      $message=array('status' => 0,'msg' =>'No worker found','data'=>array());                           
+                      $this->response($message, 300);
+                 }
+           }
+		   
+		   
+	 //Collector time for unit job
+        public function collector_unit_time_post()
+          { 
+			$data=file_get_contents('php://input');
+			$details=json_decode($data);       
+		  
+		     $job_number=trim($details->job_number);
+		     $collector_id=trim($details->collector_id);
+			 $device_id =trim($details->device_id);
+		     $type=trim($details->type);
+			 $time = trim($details->scan_time);
+			 
+             $result = $this->users_model->collector_unit_time($job_number,$collector_id,$device_id,$type,$time);
+                 
+				 $this->db->select('*');
+				 $this->db->from('picking_details_collector');			
+				 $this->db->where('job_number', $job_number);
+				 $this->db->where('collector_id', $collector_id);
+				 $this->db->where('device_id', $device_id);                                 
+				 $this->db->where('status', 'started');                                    
+				 $query = $this->db->get(); 	    			
+					
+				 if(count($query->result()) > 0)
+				 {
+				   $collector_id = $query->row()->collector_id ;
+				 }else{
+					 
+					 $this->db->select('*');
+					 $this->db->from('picking_details_collector');			
+					 $this->db->where('job_number', $job_number);					 
+					 $this->db->where('device_id', $device_id);                                 
+					 $this->db->order_by('start_time', 'desc');
+					 $this->db->limit(1);
+					 $res = $this->db->get();
+					 
+					 $collector_id = $res->row()->collector_id ;
+				 }	
+
+				   $this->db->select('*');
+				   $this->db->from('collector');		 		
+				   $this->db->where('nfc_tag_id', $collector_id);                                    
+				   $query = $this->db->get();		 				
+				   $data = $query->result()[0]; 
+				 
+                 if($result == 1)
+                   {
+                      $message=array('status' => 1,'msg' =>'Collector Job started!','data'=>$data);                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 2)
+                   {
+                      $message=array('status' => 2,'msg' =>'Job started by same collector..','data'=>$data);                     
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 3)
+                   {
+                      $message=array('status' => 3,'msg' =>'Collector Job is already finished..','data'=>$data);                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 4)
+                   {
+                      $message=array('status' => 4,'msg' =>'Collector Job finished!','data'=>$data);                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 5)
+                   {
+                      $message=array('status' => 5,'msg' =>'Collector Job is not started!','data'=>$data);                    
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 6)
+                   {
+                      $message=array('status' => 6,'msg' =>'Invalid Collector..','data'=>$data);                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 7)
+                   {
+                      $message=array('status' => 7,'msg' =>'Job started by another collector..','data'=>$data);             
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 8)
+                   {
+                      $message=array('status' => 8,'msg' =>'Collector needs to finish the first job..','data'=>$data);           
+                      $this->response($message, 200);	
+					  
+                 }elseif($result == 9)
+                   {
+                      $message=array('status' => 9,'msg' =>'Job is paused, Collector needs to reset the job..','data'=>$data);           
+                      $this->response($message, 200);					  
+                 }else{
+                      $message=array('status' => 0,'msg' =>'Failed..');                           
+                      $this->response($message, 300);
+                 }
+           } 
+		  
+
+	   //Collector time for row job
+        public function collector_row_time_post()
+          { 
+			$data=file_get_contents('php://input');
+			$details=json_decode($data);       
+		  
+		     $job_number=trim($details->job_number);
+		     $collector_id=trim($details->collector_id);
+			 $device_id =trim($details->device_id);
+		     $type=trim($details->type);
+			 $time = trim($details->scan_time);
+			 
+             $result = $this->users_model->collector_row_time($job_number,$collector_id,$device_id,$type,$time);
+               
+				$this->db->select('*');
+				 $this->db->from('row_details_collector');			
+				 $this->db->where('job_number', $job_number);
+				 $this->db->where('collector_id', $collector_id);
+				 $this->db->where('device_id', $device_id);                                 
+				 $this->db->where('status', 'started');                                    
+				 $query = $this->db->get(); 	    			
+					
+				 if(count($query->result()) > 0)
+				 {
+				   $collector_id = $query->row()->collector_id ;
+				 }else{
+					 
+					 $this->db->select('*');
+					 $this->db->from('row_details_collector');			
+					 $this->db->where('job_number', $job_number);					 
+					 $this->db->where('device_id', $device_id);                                 
+					 $this->db->order_by('start_time', 'desc');
+					 $this->db->limit(1);
+					 $res = $this->db->get();
+					 
+					 $collector_id = $res->row()->collector_id ;
+				 }	
+
+				   $this->db->select('*');
+				   $this->db->from('collector');		 		
+				   $this->db->where('nfc_tag_id', $collector_id);                                    
+				   $query = $this->db->get();		 				
+				   $data = $query->result()[0];
+			   
+                 if($result == 1)
+                   {
+                      $message=array('status' => 1,'msg' =>'Collector Job started!','data'=>$data);                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 2)
+                   {
+                      $message=array('status' => 2,'msg' =>'Job started by same collector..','data'=>$data);                     
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 3)
+                   {
+                      $message=array('status' => 3,'msg' =>'Collector Job is already finished..','data'=>$data);                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 4)
+                   {
+                      $message=array('status' => 4,'msg' =>'Collector Job finished!','data'=>$data);                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 5)
+                   {
+                      $message=array('status' => 5,'msg' =>'Collector Job is not started!','data'=>$data);                    
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 6)
+                   {
+                      $message=array('status' => 6,'msg' =>'Invalid Collector..','data'=>$data);                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 7)
+                   {
+                      $message=array('status' => 7,'msg' =>'Job started by another collector..','data'=>$data);             
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 8)
+                   {
+                      $message=array('status' => 8,'msg' =>'Collector needs to finish the first job..','data'=>$data);           
+                      $this->response($message, 200);	
+					  
+                 }elseif($result == 9)
+                   {
+                      $message=array('status' => 9,'msg' =>'Job is paused, Collector needs to reset the job..','data'=>$data);           
+                      $this->response($message, 200);					  
+                 }else{
+                      $message=array('status' => 0,'msg' =>'Failed..');                           
+                      $this->response($message, 300);
+                 }
+           }  
+		   
+	 
+	 //Worker time for job_per_row
+        public function worker_time_job_per_row_post()
+          { 
+			$data=file_get_contents('php://input');
+			$details=json_decode($data);       
+		  
+		     $job_number=trim($details->job_number);
+			 $worker=trim($details->worker);
+		     $type=trim($details->type);
+			 $time = trim($details->scan_time);
+		     			 
+             $result = $this->users_model->worker_time_row($job_number,$worker,$type,$time);
+             
+			 $this->db->select('row_details_worker.* , worker.worker_name');
+			 $this->db->from('row_details_worker');	
+			 $this->db->join('worker', 'worker.nfc_tag_id = row_details_worker.worker_id')	;			 
+			 $this->db->where('job_number', $job_number);			
+			 $this->db->where('worker_id', $worker);                         
+			 $res = $this->db->get();
+			 $data = $res->result()[0];
+			 
+                 if($result == 1)
+                   {
+                      $message=array('status' => 1,'msg' =>'Worker Job started!','data'=>$data);                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 2){
+                      $message=array('status' => 2,'msg' =>'Invalid Worker..','data'=>$data);                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 3){
+                      $message=array('status' => 3,'msg' =>'Job already finished..','data'=>$data);                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 4){
+                      $message=array('status' => 4,'msg' =>'Job already started..','data'=>$data);                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 5){
+                      $message=array('status' => 5,'msg' =>'Worker Job finished!','data'=>$data);                           
+                      $this->response($message, 200);
+					  
+                 }else{
+                      $message=array('status' => 0,'msg' =>'Failed..');                           
+                      $this->response($message, 300);
+                 }
+           }		   
+		   
+		   
+	  //Row scan time
+        public function row_scan_time_post()
+          { 
+			$data=file_get_contents('php://input');
+			$details=json_decode($data);       
+		  
+		     $job_number=trim($details->job_number);
+			 $worker=trim($details->worker);
+			 $collector=trim($details->collector);
+		     $row=trim($details->row);
+		     $type=trim($details->type);
+		     $time = trim($details->scan_time);
+		     			 
+             $result = $this->users_model->row_time($job_number,$worker,$collector,$row,$type,$time);
+              
+			 $this->db->select('row_details_worker.* , worker.worker_name');
+			 $this->db->from('row_details_worker');	
+			 $this->db->join('worker', 'worker.nfc_tag_id = row_details_worker.worker_id')	;			 
+			 $this->db->where('job_number', $job_number);			
+			 $this->db->where('worker_id', $worker);                         
+			 $res = $this->db->get(); 
+			 
+			 if($row != ''){	
+			 
+			   $this->db->select('row_scan.row_tag_id, worker.nfc_tag_id, worker.worker_name');
+			   $this->db->from('row_scan');
+			   $this->db->join('worker', 'worker.nfc_tag_id = row_scan.worker_id')	;	
+			   $this->db->where('row_scan.row_tag_id', $row);
+			   $this->db->order_by('row_scan.last_scan', 'desc');
+			   $this->db->limit(1);
+			   $query = $this->db->get();	//second latest worker scanned for row
+
+			   foreach($res->result() as $val)
+			   {
+				  $val->last_worker_row_tag_id = $query->row()->row_tag_id ;
+				  $val->last_worker_nfc_tag_id = $query->row()->nfc_tag_id ;
+				  $val->last_worker_worker_name = $query->row()->worker_name ;
+			   }
+			 }else{
+				 
+				 foreach($res->result() as $val)
+				   {
+					  $val->last_worker_row_tag_id = '' ;
+					  $val->last_worker_nfc_tag_id = '' ;
+					  $val->last_worker_worker_name = '' ;
+				   }
+			 }			 
+			 			 
+			 $data = $res->result()[0];
+			  
+                 if($result == 1)
+                   {
+                      $message=array('status' => 1,'msg' =>'Worker scanned!','data'=>$data);                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 2){
+                      $message=array('status' => 2,'msg' =>'Invalid Worker..');                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 3){
+                      $message=array('status' => 3,'msg' =>'Invalid Row..','data'=>$data);                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 4){
+                      $message=array('status' => 4,'msg' =>'Row already started by same worker..','data'=>$data);                          
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 5){
+                      $message=array('status' => 5,'msg' =>'Row started!','data'=>$data);                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 6){
+                      $message=array('status' => 6,'msg' =>'Duplicate Row, Scan collector to override..','data'=>$data);                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 7){
+                      $message=array('status' => 7,'msg' =>'Row is not started..','data'=>$data);                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 8){
+                      $message=array('status' => 8,'msg' =>'Row Finished!','data'=>$data);                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 9){
+                      $message=array('status' => 9,'msg' =>'Row already finished, cannot be unallocated..','data'=>$data);           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 10){
+                      $message=array('status' => 10,'msg' =>'Row Unallocated!','data'=>$data);           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 11){
+                      $message=array('status' => 11,'msg' =>'Row Unfinished!','data'=>$data);           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 12){
+                      $message=array('status' => 12,'msg' =>'Row is not finished!','data'=>$data);           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 13){
+                      $message=array('status' => 13,'msg' =>'Same worker can only start an unfinished row!','data'=>$data);           
+                      $this->response($message, 200);
+					  
+                 }else{
+                      $message=array('status' => 0,'msg' =>'Failed..');                           
+                      $this->response($message, 300);
+                 }
+           }
+		   
+		   
+		   
+	//Worker time for job_per_bucket
+        public function worker_time_per_bucket_post()
+          { 
+			$data=file_get_contents('php://input');
+			$details=json_decode($data);       
+		  
+		     $job_number=trim($details->job_number);
+			 $worker=trim($details->worker);
+		     $type=trim($details->type);
+			 $time = trim($details->scan_time);
+		     			 
+             $result = $this->users_model->worker_time_bucket($job_number,$worker,$type,$time);
+             
+			 $this->db->select('picking_details_worker.* , worker.worker_name');
+			 $this->db->from('picking_details_worker');	
+			 $this->db->join('worker', 'worker.nfc_tag_id = picking_details_worker.worker_id')	;			 
+			 $this->db->where('job_number', $job_number);			
+			 $this->db->where('worker_id', $worker);                         
+			 $res = $this->db->get();
+			 $data = $res->result()[0];
+			 
+                 if($result == 1)
+                   {
+                      $message=array('status' => 1,'msg' =>'Worker Job started!','data'=>$data);                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 2){
+                      $message=array('status' => 2,'msg' =>'Invalid Worker..','data'=>$data);                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 3){
+                      $message=array('status' => 3,'msg' =>'Job already finished..','data'=>$data);                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 4){
+                      $message=array('status' => 4,'msg' =>'Job already started..','data'=>$data);                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 5){
+                      $message=array('status' => 5,'msg' =>'Worker Job finished!','data'=>$data);                           
+                      $this->response($message, 200);
+					  
+                 }else{
+                      $message=array('status' => 0,'msg' =>'Failed..');                           
+                      $this->response($message, 300);
+                 }
+           }
+		   
+	   
+	  	   
+		   
+	   //Bucket scan time
+        public function bucket_scan_time_post()
+          { 
+			$data=file_get_contents('php://input');
+			$details=json_decode($data);       
+		  
+		     $job_number=trim($details->job_number);
+			 $worker=trim($details->worker);
+			 $collector=trim($details->collector);
+		     $bucket=trim($details->bucket);
+			 $time = trim($details->scan_time);
+		     			 
+             $result = $this->users_model->bucket_time($job_number,$worker,$collector,$bucket,$time);
+              
+			//Worker tag is scanned instead of bucket tag  
+			 $this->db->select('*');
+			 $this->db->from('worker');			
+			 $this->db->where('nfc_tag_id', $bucket);  						                               
+			 $work = $this->db->get(); 								
+			 if(count($work->result()) > 0)
+			 {
+				$this->db->select('*');
+				$this->db->from('picking_details_worker');			
+				$this->db->where('job_number', $job_number);                                    
+				$this->db->where('worker_id', $bucket);                                    
+				$query = $this->db->get(); 						
+								
+				if(count($query->result()) > 0)
+				{
+				  $worker = $bucket ;								  
+				}
+			  } 
+			  
+			 $this->db->select('picking_details_worker.* , worker.worker_name');
+			 $this->db->from('picking_details_worker');	
+			 $this->db->join('worker', 'worker.nfc_tag_id = picking_details_worker.worker_id')	;			 
+			 $this->db->where('job_number', $job_number);			
+			 $this->db->where('worker_id', $worker);                         
+			 $res = $this->db->get(); 
+			 
+			 if($bucket != ''){	
+			 
+			   $this->db->select('bucket_scan.bucket_tag_id, worker.nfc_tag_id, worker.worker_name');
+			   $this->db->from('bucket_scan');
+			   $this->db->join('worker', 'worker.nfc_tag_id = bucket_scan.worker_id')	;	
+			   $this->db->where('bucket_scan.bucket_tag_id', $bucket);
+			   $this->db->order_by('bucket_scan.last_scan', 'desc');
+			   $this->db->limit(1);
+			   $query = $this->db->get();	//second latest worker scanned for bucket
+
+			   foreach($res->result() as $val)
+			   {
+				  $val->last_worker_bucket_tag_id = $query->row()->bucket_tag_id ;
+				  $val->last_worker_nfc_tag_id = $query->row()->nfc_tag_id ;
+				  $val->last_worker_worker_name = $query->row()->worker_name ;
+			   }
+			 }else{
+				 
+				 foreach($res->result() as $val)
+				   {
+					  $val->last_worker_bucket_tag_id = '' ;
+					  $val->last_worker_nfc_tag_id = '' ;
+					  $val->last_worker_worker_name = '' ;
+				   }
+			 }
+			 
+			 			 
+			 $data = $res->result()[0];
+			  
+                 if($result == 1)
+                   {
+                      $message=array('status' => 1,'msg' =>'Worker scanned!','data'=>$data);                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 2){
+                      $message=array('status' => 2,'msg' =>'Invalid Worker..');                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 3){
+                      $message=array('status' => 3,'msg' =>'Duplicate bucket, please scan Collector..','data'=>$data);                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 4){
+                      $message=array('status' => 4,'msg' =>'Collector not scanned..','data'=>$data);                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 5){
+                      $message=array('status' => 5,'msg' =>'Bucket scanned!','data'=>$data);                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 6){
+                      $message=array('status' => 6,'msg' =>'Collector scanned, duplicate bucket scanned!','data'=>$data);                           
+                      $this->response($message, 200);
+					  
+                 }else{
+                      $message=array('status' => 0,'msg' =>'Failed..');                           
+                      $this->response($message, 300);
+                 }
+           }
+		   
+		   
+	   //Pause Row job
+        public function pause_job_row_post()
+          { 
+			$data=file_get_contents('php://input');
+			$details=json_decode($data);       
+		  
+		     $job_number=trim($details->job_number);		    
+		     $type=trim($details->type);		    
+		     $time = trim($details->scan_time);	    
+		       
+			 $result = $this->users_model->break_time_job_row($job_number,$type,$time);
+                 
+                 if($result == 1)
+                   {
+                      $message=array('status' => 1,'msg' =>'Job paused!');                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 2)
+                   {
+                      $message=array('status' => 2,'msg' =>'Job is not started!');                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 3)
+                   {
+                      $message=array('status' => 3,'msg' =>'Job is not paused!');                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 4)
+                   {
+                      $message=array('status' => 4,'msg' =>'Job reset!');                           
+                      $this->response($message, 200);
+					  
+                 }else{
+                      $message=array('status' => 0,'msg' =>'Failed..');                           
+                      $this->response($message, 300);
+                 }
+           }
+		   
+		   
+		   
+		//Pause Bucket job
+        public function pause_job_bucket_post()
+          { 
+			$data=file_get_contents('php://input');
+			$details=json_decode($data);       
+		  
+		     $job_number=trim($details->job_number);		    
+		     $type=trim($details->type);		    
+		     $time=trim($details->scan_time);		    
+		       
+			 $result = $this->users_model->break_time_job_bucket($job_number,$type,$time);
+                 
+                 if($result == 1)
+                   {
+                      $message=array('status' => 1,'msg' =>'Job paused!');                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 2)
+                   {
+                      $message=array('status' => 2,'msg' =>'Job is not started!');                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 3)
+                   {
+                      $message=array('status' => 3,'msg' =>'Job is not paused!');                           
+                      $this->response($message, 200);
+					  
+                 }elseif($result == 4)
+                   {
+                      $message=array('status' => 4,'msg' =>'Job reset!');                           
+                      $this->response($message, 200);
+					  
+                 }else{
+                      $message=array('status' => 0,'msg' =>'Failed..');                           
+                      $this->response($message, 300);
+                 }
+           }
+		   
+		   
+		   
+	//Sync picking_details_collector
+      public function sync_picking_details_collector_post()
+       { 
+			$data=file_get_contents('php://input');
+			$details=json_decode($data);       
+		  
+		     $job_number=trim($details->job_number);		    
+		     $collector_id=trim($details->collector_id);		    
+		   	     
+			 $result = $this->users_model->sync_collector_picking($job_number,$collector_id);
+                 
+                 if($result)
+                   {
+                      $message=array('status' => 1,'msg' =>'Sync data!','data'=>$result);                           
+                      $this->response($message, 200);
+					  
+                 }else{
+                      $message=array('status' => 0,'msg' =>'Failed..');                           
+                      $this->response($message, 300);
+                 }
+           }
+		   
+		   
+	 //Sync picking_details_worker
+      public function sync_picking_details_worker_post()
+       { 
+			$data=file_get_contents('php://input');
+			$details=json_decode($data);       
+		  
+		     $job_number=trim($details->job_number);		    
+		    	   	     
+			 $result = $this->users_model->sync_worker_picking($job_number);
+                 
+                 if($result)
+                   {
+                      $message=array('status' => 1,'msg' =>'Sync data!','data'=>$result);                           
+                      $this->response($message, 200);
+					  
+                 }else{
+                      $message=array('status' => 0,'msg' =>'Failed..');                           
+                      $this->response($message, 300);
+                 }
+        }
+     
+	 
+	 //Sync bucket_scan
+      public function sync_bucket_scan_post()
+       { 
+			$data=file_get_contents('php://input');
+			$details=json_decode($data);       
+		  
+		     $job_number=trim($details->job_number);		    
+		    	   	     
+			 $result = $this->users_model->sync_bucket_picking($job_number);
+                 
+                 if($result)
+                 {
+                   $message=array('status' => 1,'msg' =>'Sync data!','data'=>$result);                           
+                   $this->response($message, 200);
+					  
+                 }else{
+                   $message=array('status' => 0,'msg' =>'Failed..');                           
+                   $this->response($message, 300);
+                 }
+        }
+		
+		
+    //Sync row_details_collector
+      public function sync_row_details_collector_post()
+       { 
+			$data=file_get_contents('php://input');
+			$details=json_decode($data);       
+		  
+		     $job_number=trim($details->job_number);		    
+		     $collector_id=trim($details->collector_id);		    
+		   	     
+			 $result = $this->users_model->sync_collector_row($job_number,$collector_id);
+                 
+                 if($result)
+                   {
+                      $message=array('status' => 1,'msg' =>'Sync data!','data'=>$result);                           
+                      $this->response($message, 200);
+					  
+                 }else{
+                      $message=array('status' => 0,'msg' =>'Failed..');                           
+                      $this->response($message, 300);
+                 }
+           }
+
+
+	//Sync row_details_worker
+      public function sync_row_details_worker_post()
+       { 
+			$data=file_get_contents('php://input');
+			$details=json_decode($data);       
+		  
+		     $job_number=trim($details->job_number);		    
+		    	   	     
+			 $result = $this->users_model->sync_worker_row($job_number);
+                 
+                 if($result)
+                   {
+                      $message=array('status' => 1,'msg' =>'Sync data!','data'=>$result);                           
+                      $this->response($message, 200);
+					  
+                 }else{
+                      $message=array('status' => 0,'msg' =>'Failed..');                           
+                      $this->response($message, 300);
+                 }
+        }
+		
+	
+	//Sync row_scan
+      public function sync_row_scan_post()
+       { 
+			$data=file_get_contents('php://input');
+			$details=json_decode($data);       
+		  
+		     $job_number=trim($details->job_number);		    
+		    	   	    
+			 $result = $this->users_model->sync_row_picking($job_number);
+                 
+                 if($result)
+                 {
+                   $message=array('status' => 1,'msg' =>'Sync data!','data'=>$result);                           
+                   $this->response($message, 200);
+					  
+                 }else{
+                   $message=array('status' => 0,'msg' =>'Failed..');                           
+                   $this->response($message, 300);
+                 }
+        }
+			
+		
+	//Sync offline data of picking_details_collector
+      public function sync_offline_picking_details_collector_post()
+       { 
+			$data=file_get_contents('php://input');
+			$details=json_decode($data);       
+		  
+		     $picking_collectors = $details->data ;
+				    	   	     
+			 $response = $this->users_model->sync_offline_collector_picking($picking_collectors);
+             			 
+             if($response)
+              {
+                   $message=array('status' => 1,'msg' =>'Data sync completed!','data'=>$response);                           
+                   $this->response($message, 200);
+					  
+              }else{
+                   $message=array('status' => 0,'msg' =>'Failed..');                           
+                   $this->response($message, 300);
+             }
+        }
+		
+		
+     //Sync offline data of picking_details_worker
+      public function sync_offline_picking_details_worker_post()
+       { 
+			$data=file_get_contents('php://input');
+			$details=json_decode($data);       
+		  
+		     $picking_workers = $details->data ;
+				    	   	     
+			 $response = $this->users_model->sync_offline_worker_picking($picking_workers);
+             			 
+             if($response)
+              {
+                   $message=array('status' => 1,'msg' =>'Data sync completed!','data'=>$response);                           
+                   $this->response($message, 200);
+					  
+              }else{
+                   $message=array('status' => 0,'msg' =>'Failed..');                           
+                   $this->response($message, 300);
+             }
+        }
+		
+		
+	//Sync offline data of bucket scan
+      public function sync_offline_bucket_scan_post()
+       { 
+			$data=file_get_contents('php://input');
+			$details=json_decode($data);       
+		  
+		     $bucket_scans = $details->data ;
+				    	   	     
+			 $response = $this->users_model->sync_offline_bucket_scan($bucket_scans);
+             			 
+             if($response)
+              {
+                   $message=array('status' => 1,'msg' =>'Data sync completed!','data'=>$response);                           
+                   $this->response($message, 200);
+					  
+              }else{
+                   $message=array('status' => 0,'msg' =>'Failed..');                           
+                   $this->response($message, 300);
+             }
+        }
+		
+	
+	//Sync offline data of row_details_collector
+      public function sync_offline_row_details_collector_post()
+       { 
+			$data=file_get_contents('php://input');
+			$details=json_decode($data);       
+		  
+		     $row_collectors = $details->data ;
+				    	   	     
+			 $response = $this->users_model->sync_offline_collector_row($row_collectors);
+             			 
+             if($response)
+              {
+                   $message=array('status' => 1,'msg' =>'Data sync completed!','data'=>$response);                           
+                   $this->response($message, 200);
+					  
+              }else{
+                   $message=array('status' => 0,'msg' =>'Failed..');                           
+                   $this->response($message, 300);
+             }
+        }
+		
+		
+	 //Sync offline data of row_details_worker
+      public function sync_offline_row_details_worker_post()
+       { 
+			$data=file_get_contents('php://input');
+			$details=json_decode($data);       
+		  
+		     $row_workers = $details->data ;
+				    	   	     
+			 $response = $this->users_model->sync_offline_worker_row($row_workers);
+             			 
+             if($response)
+              {
+                   $message=array('status' => 1,'msg' =>'Data sync completed!','data'=>$response);                           
+                   $this->response($message, 200);
+					  
+              }else{
+                   $message=array('status' => 0,'msg' =>'Failed..');                           
+                   $this->response($message, 300);
+             }
+        }
+		
+		
+	 //Sync offline data of row scan
+      public function sync_offline_row_scan_post()
+       { 
+			$data=file_get_contents('php://input');
+			$details=json_decode($data);       
+		  
+		     $row_scans = $details->data ;
+				    	   	     
+			 $response = $this->users_model->sync_offline_row_scan($row_scans);
+             			 
+             if($response)
+              {
+                   $message=array('status' => 1,'msg' =>'Data sync completed!','data'=>$response);                           
+                   $this->response($message, 200);
+					  
+              }else{
+                   $message=array('status' => 0,'msg' =>'Failed..');                           
+                   $this->response($message, 300);
+             }
+        }
+		
+			
+	}
+?>
